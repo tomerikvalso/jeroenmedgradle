@@ -2,9 +2,11 @@ package be.ordina.config;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 
+@EnableWebSecurity
 public class ResourceServerConfig extends WebSecurityConfigurerAdapter {
 
     @Override
