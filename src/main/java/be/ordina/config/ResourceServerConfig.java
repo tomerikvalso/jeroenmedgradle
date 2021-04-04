@@ -15,7 +15,7 @@ public class ResourceServerConfig extends WebSecurityConfigurerAdapter {
                 .exceptionHandling()
                 .authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)).and().cors().and()
                 .authorizeRequests()
-                .mvcMatchers("/api/heroes/**").hasAuthority("SCOPE_heroes").anyRequest().denyAll()
+             //  .mvcMatchers("/api/heroes/**").hasAuthority("SCOPE_heroes").anyRequest().denyAll()
                 .mvcMatchers("/v3/api-docs","/swagger-ui/index.html","/swagger-ui/**").permitAll()
                 .and().oauth2ResourceServer().jwt();
     }
